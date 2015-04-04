@@ -46,7 +46,7 @@
 ### Description
 * __src/__ : *.c, *.h 파일 디렉토리
 * __src/main.c__ : 메인 함수 부분
-*  __src/func.c__ : Maze 생성 및 관련 함수 정의 부분
+*  __src/func.c__ : Maze 생성 및 탐색 관련 함수 정의 부분
 * __src/stack.c__ : Stack 알고리즘 관련 함수 정의 부분
 * __src/debug.c__ : Debugging 함수 정의 부분
 * __src/head.h__ : 각종 함수들 전방 선언, struct, enum 선언 헤더
