@@ -71,13 +71,16 @@ int readFile(FILE **fp) {
 
 /* Make 'Maze Array' by 'maze.txt' start index was [1, 1] */
 mazeSize inputMaze(char(*maze)[SIZE], FILE **fp, mazeSize *size) {
+	int trash;
 	char tmpByte = '\0';
 	int tmpWidth = 0;
+	
 	/* Drop Index Value */
-	fgetc(*fp); //first Index value
+	fscanf(*fp, "%d", &trash); //first Index value
 	fgetc(*fp);	//Space value 
-	fgetc(*fp); //second Index value
+	fscanf(*fp, "%d", &trash); //second Index value
 	fgetc(*fp);	//Enter value
+	
 	while (!feof(*fp)) {
 		tmpByte = fgetc(*fp);
 		if (tmpByte == ' ') {
