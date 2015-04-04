@@ -58,4 +58,4 @@
 * __src/debug.c__ : Debugging 함수 정의 부분
 * __src/head.h__ : 각종 함수들 전방 선언, struct, enum 선언 헤더
 * __Makefile__ : 컴파일 규칙 명명
-* __miro.txt__ : 실행 파일 예제
+* __miro.txt__ : Input File. 위의 '문제'에 나온 예제와 같은 파일
