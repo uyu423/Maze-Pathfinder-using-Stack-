@@ -47,7 +47,7 @@ void pathFinder(char(*maze)[SIZE], mazeSize *goal, stackManager *stackMgr, offse
 void printResult(bool found, int row, int col, mazeSize *goal, stackManager *stackMgr) {
 	int i;
 	if(!found) {
-		printf("\n** The maze dose not have a path **\n");
+		printf("\n** The maze dose not have a path **\n\n");
 		return;
 	}
 	else {
@@ -57,7 +57,7 @@ void printResult(bool found, int row, int col, mazeSize *goal, stackManager *sta
 		for(i=stackMgr->top; i>=0; i--) {
 			printf("<-(%d, %d)", (stackMgr->stack[i].row)-1, (stackMgr->stack[i].col)-1);
 		}
-		putchar('\n');
+		printf('\n\n');
 	}
 }
 
