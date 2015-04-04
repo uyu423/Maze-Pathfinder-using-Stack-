@@ -57,7 +57,7 @@ void printResult(bool found, int row, int col, mazeSize *goal, stackManager *sta
 		for(i=stackMgr->top; i>=0; i--) {
 			printf("<-(%d, %d)", (stackMgr->stack[i].row)-1, (stackMgr->stack[i].col)-1);
 		}
-		printf('\n\n');
+		printf("\n\n");
 	}
 }
 
