@@ -53,7 +53,7 @@
 * __Makefile__ : 컴파일 규칙 명명
 * __miro.txt__ : Input File. 위의 '문제'에 나온 예제와 같은 파일
 * __miro_12x12.txt__ : 12x12 Input File. 사용하려면 miro.txt로 이름 변경.
-* __miro_20x20.txt__ : 20x20 Input File. 탐색 최악의 경우 가정. 사용하려면 miro.txt로 이름 변경.
+* __miro_20x21.txt__ : 20x20 Input File. 탐색 최악의 경우 가정. 사용하려면 miro.txt로 이름 변경.
 
 ### Issue
 * 처음 파일입출력 코딩할 때 문제를 제대로 안 읽어서 첫 행의 행, 열 값 주는 것을 고려하지 않고 코딩함. (소스상에서 Maze 크기를 직접 계산) -> src/func.c 의 77~80 Line을 추가함으로써 해결. __문제를 잘 읽읍시다.__ 이 4줄을 삭제하면 첫 행 없이도 실행 가능.
