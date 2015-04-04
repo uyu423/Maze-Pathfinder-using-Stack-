@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define FILENAME "maze.txt"
+#define FILENAME "miro.txt"
 #define SIZE 60
 typedef enum { N, NE, E, SE, S, SW, W, NW } direction;
 typedef enum { false, true } bool;
