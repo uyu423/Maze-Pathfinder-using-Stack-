@@ -32,7 +32,6 @@ int main(void) {
 //	printMazeSizeTable(&size, &goal); /* print 'goal', 'size' mazeSize offset for Debugging */
 //	printMazeStatus(maze, &size);	/* print Maze Map for Debugging */
 	pathFinder(maze, &goal, &stackMgr, move);
-
 	
 	return 0;
 }
