@@ -26,18 +26,11 @@
 6. 탐색 시 __다음 경로(nextRow, nextCol)을 체크__하여 Goal 인지 아니지, 진행 가능한 경로인지 아닌지 체크한다.
 7. Stack을 사용한 탐색은 __Recursion이 아닌 While 반복문으로 작성__되었다.
 
-### 문제'점'
-* 처음에 파일입출력 코딩할 때 문제를 제대로 안 읽어서 첫 행의 행, 열 값 주는 것을 고려하지 않고 코딩함. (소스상에서 Maze 크기를 직접 계산) -> src/func.c 의 77~80 Line을 추가함으로써 해결. __문제를 잘 읽읍시다.__ 이 4줄을 삭제하면 첫 행 없이도 실행 가능.
-* 마찬가지로 문제를 똑바로 안읽어서 미로 칸 사이에 ' '(스페이스)가 있어도 제대로 읽어들여옴. 이건 문제점 보다는 부가기능..
-* StackPop() 함수에서 스택이 비었을때 뭔가 처리 하는 부분이 있기는 하지만 PathFinder() 함수가 굴러가면서 Empty Stack이 발생하는 경우가 없다.
-* 지금 보니 offset 구조체와 mazeSize 구조체의 멤버 변수가 똑같다;;;;
-
-### Properties Overview
+### Develop Overview
 *	ProjectName	: DSB Proj.1 Maze Finder (Stack)
 *	Corder 		: Yu Yongwoo (YoWu)
 *	Organiz.	: Catholic Univ. of Korea
 *	Major		: Computer Science (Minor : Infomation System Eng)
-*	StudentNum	: 201021395
 *	DateTime	: 2015.4.1(Mon) 13:34
 *	Contact		: uyu423@gmail.com (http://luckyyowu.tistory.com)
 *	Develop OS	: CentOS Linux 6.6 x86 (kernel 2.6.32-504)
@@ -50,12 +43,18 @@
 * __Make__ : ...그냥 컴파일. 컴파일 하면 ./ 디렉토리에 오브젝트 파일(*.o)과 실행파일(maze)이 생성된다.
 * __Make clean__ : 재컴파일을 위한 오브젝트 파일, 실행 파일 삭제
 
-### 그냥 설명
+### Description
 * __src/__ : *.c, *.h 파일 디렉토리
 * __src/main.c__ : 메인 함수 부분
-* __src/func.c__ : Maze 생성 및 관련 함수 정의 부분
+*  __src/func.c__ : Maze 생성 및 관련 함수 정의 부분
 * __src/stack.c__ : Stack 알고리즘 관련 함수 정의 부분
 * __src/debug.c__ : Debugging 함수 정의 부분
 * __src/head.h__ : 각종 함수들 전방 선언, struct, enum 선언 헤더
 * __Makefile__ : 컴파일 규칙 명명
 * __miro.txt__ : Input File. 위의 '문제'에 나온 예제와 같은 파일
+
+### Issue
+* 처음 파일입출력 코딩할 때 문제를 제대로 안 읽어서 첫 행의 행, 열 값 주는 것을 고려하지 않고 코딩함. (소스상에서 Maze 크기를 직접 계산) -> src/func.c 의 77~80 Line을 추가함으로써 해결. __문제를 잘 읽읍시다.__ 이 4줄을 삭제하면 첫 행 없이도 실행 가능.
+* 마찬가지로 문제를 똑바로 안읽어서 미로 칸 사이에 ' '(스페이스)가 있어도 제대로 읽어들여옴. 이건 문제점 보다는 부가기능..
+* StackPop() 함수에서 스택이 비었을때 뭔가 처리 하는 부분이 있기는 하지만 PathFinder() 함수가 굴러가면서 Empty Stack이 발생하는 경우가 없다.
+* 지금 보니 offset 구조체와 mazeSize 구조체의 멤버 변수가 똑같다;;;;
