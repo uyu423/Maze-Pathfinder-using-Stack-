@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "head.h"
 
+/* If Stack Fulled, re-allocate Stack size  */
 void stackPush(stackManager *stackMgr, element item) {
 	if (stackFull(stackMgr)) {
 		stackMgr->stack = (element *)realloc(stackMgr->stack, (2 * (stackMgr->size) * sizeof(element)) + sizeof(element));
