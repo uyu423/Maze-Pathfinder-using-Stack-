@@ -4,6 +4,8 @@
 /* Other C File's Function Extern */
 element stackPop(stackManager *stackMgr);	//stack.c
 
+/* Maze Path Finding Function using Stack */
+/* StackMgr included Stack Structure(element *stack) */
 void pathFinder(char(*maze)[SIZE], mazeSize *goal, stackManager *stackMgr, offset *move) {
 	char mark[60][60];
 	int i, row, col, nextRow, nextCol, dir;
@@ -44,6 +46,7 @@ void pathFinder(char(*maze)[SIZE], mazeSize *goal, stackManager *stackMgr, offse
 	return;
 }
 
+/* if succeed found GOAL, print path. but not found , print other Message. */
 void printResult(bool found, int row, int col, mazeSize *goal, stackManager *stackMgr) {
 	int i;
 	if(!found) {
@@ -61,6 +64,7 @@ void printResult(bool found, int row, int col, mazeSize *goal, stackManager *sta
 	}
 }
 
+/* Input file (Miro.txt) Descriptor Generator */
 int readFile(FILE **fp) {
 	if (!(*fp = fopen(FILENAME, "r"))) {
 		perror("Maze Flie Open Error : ");
