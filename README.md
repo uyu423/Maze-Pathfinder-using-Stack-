@@ -31,7 +31,7 @@
 *	ProjectName	: DSB Proj.1 Maze Finder (Stack)
 *	Corder 		: Yu Yongwoo (YoWu)
 *	Organiz.	: Catholic Univ. of Korea
-*	Major		: Computer Science (Minor : Infomation System Eng)
+*	Major		: Computer Science (Minor : Infomation System Engineering)
 *	DateTime	: 2015.4.1(Mon) 13:34
 *	Contact		: uyu423@gmail.com (http://luckyyowu.tistory.com)
 *	Develop OS	: CentOS Linux 6.6 x86 (kernel 2.6.32-504)
